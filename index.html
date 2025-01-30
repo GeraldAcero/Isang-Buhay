@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Isang Buhay - Modular Version</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- SPLASH 1 -->
+  <div id="splash1" class="splash splash1-active">
+    <img class="logo" src="logo.png" alt="Isang Buhay Logo" />
+  </div>
+
+  <!-- SPLASH 2 (Disclaimer) -->
+  <div id="splash2" class="splash splash2-hidden">
+    <div class="disclaimer-text">
+      ANG ISANG BUHAY AY ISANG LARONG SIMULASYON...
+      <!-- You can place your full disclaimer text here. -->
+    </div>
+  </div>
+
+  <!-- MAIN GAME CONTAINER -->
+  <div class="container hidden" id="mainContainer">
+    <header class="header">
+      <div class="header-left">
+        <div class="logo-title">
+          <span>Isang Buhay</span>
+        </div>
+        <div class="player-info">
+          <h2 class="player-name" id="playerName">[Player Name]</h2>
+          <p class="player-location" id="playerLocation">[Location]</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="bank-balance">
+          <span id="money">₱0</span><br />
+          <span class="balance-label">Bank Balance</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="age-container" id="ageEntries">
+        <!-- update-blocks will go here -->
+      </div>
+    </main>
+  </div><!-- end #mainContainer -->
+
+  <!-- FIXED BUTTONS -->
+  <div class="button-container">
+    <button class="age-button" id="ageBtn">+ Age</button>
+    <button class="reset-button" id="resetBtn">Reset</button>
+  </div>
+
+  <!-- NAV BAR -->
+  <nav class="nav-bar">
+    <ul>
+      <li><button class="nav-btn" data-modal="occupation">Occupation</button></li>
+      <li><button class="nav-btn" data-modal="assets">Assets</button></li>
+      <li><button class="nav-btn highlight" data-modal="relationships">Relationships</button></li>
+      <li><button class="nav-btn" data-modal="activities">Activities</button></li>
+    </ul>
+  </nav>
+
+  <!-- STATS BAR -->
+  <footer class="stats-bar">
+    <div class="stat">
+      <label>Happiness</label>
+      <div class="stat-bar">
+        <div class="stat-bar-inner happiness" id="happinessBar"></div>
+      </div>
+      <span id="happinessLabel">100</span>
+    </div>
+    <div class="stat">
+      <label>Health</label>
+      <div class="stat-bar">
+        <div class="stat-bar-inner health" id="healthBar"></div>
+      </div>
+      <span id="healthLabel">100</span>
+    </div>
+    <div class="stat">
+      <label>Smarts</label>
+      <div class="stat-bar">
+        <div class="stat-bar-inner smarts" id="smartsBar"></div>
+      </div>
+      <span id="smartsLabel">100</span>
+    </div>
+    <div class="stat">
+      <label>Looks</label>
+      <div class="stat-bar">
+        <div class="stat-bar-inner looks" id="looksBar"></div>
+      </div>
+      <span id="looksLabel">100</span>
+    </div>
+  </footer>
+
+  <!-- POPUP OVERLAY -->
+  <div id="popupOverlay" class="popup-overlay hidden">
+    <div class="popup-box">
+      <p id="popupContent"></p>
+      <button id="closePopupBtn" class="close-popup-btn">Close</button>
+    </div>
+  </div>
+
+  <!-- MAIN ENTRY SCRIPT (ES Modules) -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "male": ["Juan", "Pedro", "Jose", "Marvin", "Daniel", "Gabriel"],
+  "female": ["Maria", "Ana", "Luisa", "Genevieve", "Clarissa", "Rosario"],
+  "lastNames": ["Santos", "Garcia", "Reyes", "Cruz", "Bautista", "Flores"]
+}
